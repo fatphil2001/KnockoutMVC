@@ -9,7 +9,17 @@
 <div class="page-header">
     <h2 class="text-center">Student Registration</h2>
 </div>
-
+<div class="control-group">
+    <div class="controls" data-bind="if: ImageHandler.image">
+        <img class="img-rounded  thumb" data-bind="attr: { src: ImageHandler.imageSrc }" alt="Expense image" />
+    </div>
+</div>
+<div class="control-group">
+    <div class="controls">
+        <input type="file" accept="image/*" name="expenseImage" title="Change Image"
+               data-bind="file: ImageHandler.imageFile, fileObjectURL: ImageHandler.imageObjectURL, imageBase64: ImageHandler.image, imageType: ImageHandler.imageType" />
+    </div>
+</div>
 <div class="row">
     <div class="col-md-4">
         <div class="panel panel-info">
